@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_height="fill_parent" 
+	android:layout_width="fill_parent" 
+	android:orientation="vertical">
+	
+	<RelativeLayout 
+		android:layout_height="wrap_content"
+		android:id="@+id/relativeLayout1" 
+		android:layout_width="fill_parent">
+		<Button 
+			android:text="前月" 
+			android:id="@+id/prevMonth"
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content">
+		</Button>
+		<TextView 
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" 
+			android:id="@+id/dateText"
+			android:text="TextView" 
+			android:textSize="24sp"
+			android:layout_centerHorizontal="true"
+			android:layout_centerVertical="true">
+		</TextView>
+		<Button 
+			android:text="翌月" 
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" 
+			android:id="@+id/nextMonth"
+			android:layout_alignParentTop="true"
+			android:layout_alignParentRight="true">
+		</Button>
+	</RelativeLayout>
+	
+	<LinearLayout 
+		android:layout_height="wrap_content" 
+		android:id="@+id/linearLayout1" 
+		android:layout_width="fill_parent"
+		android:paddingLeft="3dp"
+		android:paddingRight="3dp">
+			<TextView 
+				android:gravity="center_horizontal"
+				android:text="日" 
+				android:id="@+id/Sunday" 
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:textSize="15sp"
+				android:background="@color/red">
+			</TextView>
+			<TextView 
+				android:gravity="center_horizontal"
+				android:text="月" 
+				android:id="@+id/Monday" 
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:textSize="15sp">
+			</TextView>
+			<TextView 
+				android:gravity="center_horizontal"
+				android:text="火" 
+				android:id="@+id/Tuesay" 
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:textSize="15sp">
+			</TextView>
+			<TextView 
+				android:gravity="center_horizontal"
+				android:text="水" 
+				android:id="@+id/Wednesday" 
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:textSize="15sp">
+			</TextView>
+			<TextView 
+				android:gravity="center_horizontal"
+				android:text="木" 
+				android:id="@+id/Thursday" 
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:textSize="15sp">
+			</TextView>
+			<TextView 
+				android:gravity="center_horizontal"
+				android:text="金" 
+				android:id="@+id/Friday" 
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:textSize="15sp">
+			</TextView>
+			<TextView 
+				android:gravity="center_horizontal"
+				android:text="土" 
+				android:id="@+id/Saturday" 
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:textSize="15sp"
+				android:background="@color/blue">
+			</TextView>
+		
+	</LinearLayout>
+	
+	<LinearLayout 
+		android:id="@+id/linearLayout2" 
+		android:layout_height="wrap_content" 
+		android:layout_width="wrap_content">
+		<Button 
+			android:id="@+id/btn_1" 
+			android:layout_height="45dp" 
+			android:layout_width="45dp"
+			>
+		</Button>
+		
+		<Button 
+			android:id="@+id/btn_2" 
+			android:layout_height="45dp" 
+			android:layout_width="45dp"
+			>
+		</Button>
+		
+		<Button 
+			android:id="@+id/btn_3" 
+			android:layout_height="45dp" 
+			android:layout_width="45dp">
+		</Button>
+		
+		<Button 
+			android:id="@+id/btn_4"	
+			android:layout_height="45dp" 
+			android:layout_width="45dp">
+		</Button>
+		
+		<Button 
+			android:id="@+id/btn_5"	
+			android:layout_height="45dp" 
+			android:layout_width="45dp">
+		</Button>
+		
+		<Button 
+			android:id="@+id/btn_6" 
+			android:layout_height="45dp" 
+			android:layout_width="45dp">
+		</Button>
+		
+		<Button 
+			android:id="@+id/btn_7" 
+			android:layout_height="45dp" 
+			android:layout_width="45dp">
+		</Button>	
+	</LinearLayout>
+	
+	<LinearLayout 
+		android:id="@+id/linearLayout3" 
+		android:layout_height="wrap_content" 
+		android:layout_width="wrap_content">
+		<Button 
+			android:id="@+id/btn_8" 
+			android:layout_height="45dp" 
+			android:layout_width="45dp">
+		</Button>
+		
+		<Button 
+			android:id="@+id/btn_9" 
+			android:layout_height="45dp" 
+			android:layout_width="45dp">
+		</Button>
+		
+		<Button 
+			android:id="@+id/btn_10" 
+			android:layout_height="45dp" 
+			android:layout_width="45dp">
+		</Button>
+		
+		<Button 
+			android:id="@+id/btn_11"	
+			android:layout_height="45dp" 
+			android:layout_width="45dp">
+		</Button>
+		
+		<Button 
+			android:id="@+id/btn_12" 
+			android:layout_height="45dp" 
+			android:layout_width="45dp">
+		</Button>
+		
+		<Button 
+			android:id="@+id/btn_13" 
+			android:layout_height="45dp" 
+			android:layout_width="45dp">
+		</Button>
+		
+		<Button 
+			android:id="@+id/btn_14" 
+			android:layout_height="45dp" 
+			android:layout_width="45dp">
+		</Button>	
+	</LinearLayout>
+	
+	<LinearLayout 
+		android:id="@+id/linearLayout4" 
+		android:layout_height="wrap_content" 
+		android:layout_width="wrap_content">
+		<Button 
+			android:id="@+id/btn_15" 
+			android:layout_height="45dp" 
+			android:layout_width="45dp">
+		</Button>
+		
+		<Button 
+			android:id="@+id/btn_16" 
+			android:layout_height="45dp" 
+			android:layout_width="45dp">
+		</Button>
+		
+		<Button 
+			android:id="@+id/btn_17" 
+			android:layout_height="45dp" 
+			android:layout_width="45dp">
+		</Button>
+		
+		<Button 
+			android:id="@+id/btn_18" 
+			android:layout_height="45dp" 
+			android:layout_width="45dp">
+		</Button>
+		
+		<Button 
+			android:id="@+id/btn_19" 
+			android:layout_height="45dp" 
+			android:layout_width="45dp">
+		</Button>
+		
+		<Button 
+			android:id="@+id/btn_20" 
+			android:layout_height="45dp" 
+			android:layout_width="45dp">
+		</Button>
+		
+		<Button 
+			android:id="@+id/btn_21" 
+			android:layout_height="45dp" 
+			android:layout_width="45dp">
+		</Button>	
+	</LinearLayout>
+	
+	<LinearLayout 
+		android:id="@+id/linearLayout5" 
+		android:layout_height="wrap_content" 
+		android:layout_width="wrap_content">
+		<Button 
+			android:id="@+id/btn_22" 
+			android:layout_height="45dp" 
+			android:layout_width="45dp">
+		</Button>
+		
+		<Button 
+			android:id="@+id/btn_23" 
+			android:layout_height="45dp" 
+			android:layout_width="45dp">
+		</Button>
+		
+		<Button 
+			android:id="@+id/btn_24" 
+			android:layout_height="45dp" 
+			android:layout_width="45dp">
+		</Button>
+		
+		<Button 
+			android:id="@+id/btn_25" 
+			android:layout_height="45dp" 
+			android:layout_width="45dp">
+		</Button>
+		
+		<Button 
+			android:id="@+id/btn_26" 
+			android:layout_height="45dp" 
+			android:layout_width="45dp">
+		</Button>
+		
+		<Button 
+			android:id="@+id/btn_27" 
+			android:layout_height="45dp" 
+			android:layout_width="45dp">
+		</Button>
+		
+		<Button 
+			android:id="@+id/btn_28" 
+			android:layout_height="45dp" 
+			android:layout_width="45dp">
+		</Button>	
+	</LinearLayout>
+	
+	<LinearLayout 
+		android:id="@+id/linearLayout6" 
+		android:layout_height="wrap_content" 
+		android:layout_width="wrap_content">
+		<Button 
+			android:id="@+id/btn_29" 
+			android:layout_height="45dp" 
+			android:layout_width="45dp">
+		</Button>
+		
+		<Button 
+			android:id="@+id/btn_30" 
+			android:layout_height="45dp" 
+			android:layout_width="45dp">
+		</Button>
+		
+		<Button 
+			android:id="@+id/btn_31" 
+			android:layout_height="45dp" 
+			android:layout_width="45dp">
+		</Button>
+		
+		<Button 
+			android:id="@+id/btn_32" 
+			android:layout_height="45dp" 
+			android:layout_width="45dp">
+		</Button>
+		
+		<Button 
+			android:id="@+id/btn_33" 
+			android:layout_height="45dp" 
+			android:layout_width="45dp">
+		</Button>
+		
+		<Button 
+			android:id="@+id/btn_34" 
+			android:layout_height="45dp" 
+			android:layout_width="45dp">
+		</Button>
+		
+		<Button 
+			android:id="@+id/btn_35" 
+			android:layout_height="45dp" 
+			android:layout_width="45dp">
+		</Button>	
+	</LinearLayout>
+	
+	<LinearLayout 
+		android:id="@+id/linearLayout7" 
+		android:layout_height="wrap_content" 
+		android:layout_width="wrap_content">
+		<Button 
+			android:id="@+id/btn_36" 
+			android:layout_height="45dp" 
+			android:layout_width="45dp">
+		</Button>
+		
+		<Button 
+			android:id="@+id/btn_37" 
+			android:layout_height="45dp" 
+			android:layout_width="45dp">
+		</Button>
+		
+		<Button 
+			android:id="@+id/btn_38" 
+			android:layout_height="45dp" 
+			android:layout_width="45dp">
+		</Button>
+		
+		<Button 
+			android:id="@+id/btn_39" 
+			android:layout_height="45dp" 
+			android:layout_width="45dp">
+		</Button>
+		
+		<Button 
+			android:id="@+id/btn_40" 
+			android:layout_height="45dp" 
+			android:layout_width="45dp">
+		</Button>
+		
+		<Button 
+			android:id="@+id/btn_41" 
+			android:layout_height="45dp" 
+			android:layout_width="45dp">
+		</Button>
+		
+		<Button 
+			android:id="@+id/btn_42" 
+			android:layout_height="45dp" 
+			android:layout_width="45dp">
+		</Button>	
+	</LinearLayout>
+	
+</LinearLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" 
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	
+	<TextView 
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content" 
+		android:id="@+id/textView1"
+		android:textSize="24px"
+		android:layout_centerHorizontal="true"
+		android:layout_centerVertical="true">
+	</TextView>
+
+	<TextView 
+		android:text="ここにデータが入る予定" 
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content" 
+		android:id="@+id/registDetailShowTextView">
+	</TextView>
+
+	<EditText 
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content" 
+		android:id="@+id/kensaku">
+	</EditText>
+	
+	<Button 
+		android:text="@string/kensakubotan" 
+		android:id="@+id/kensakubotan"
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content">
+	</Button>
+
+</LinearLayout>

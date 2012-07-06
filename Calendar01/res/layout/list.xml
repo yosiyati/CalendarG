@@ -10,25 +10,20 @@
 		android:id="@+id/textView1"
 		android:textSize="24px"
 		android:layout_centerHorizontal="true"
-		android:layout_centerVertical="true">
+		android:layout_centerVertical="true"
+		android:textColor="#FFFFFF">
 	</TextView>
 
-	<TextView 
-		android:text="ここにデータが入る予定" 
+	<ListView
+		android:id="@+id/listview"
+		android:layout_width="fill_parent"
 		android:layout_height="wrap_content"
-		android:layout_width="wrap_content" 
-		android:id="@+id/registDetailShowTextView">
-	</TextView>
+		android:textColor="#FFFFFF">
+	</ListView>
 
-	<EditText 
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content" 
-		android:id="@+id/kensaku">
-	</EditText>
-	
 	<Button 
-		android:text="@string/kensakubotan" 
-		android:id="@+id/kensakubotan"
+		android:text="@string/back" 
+		android:id="@+id/back"
 		android:layout_width="wrap_content" 
 		android:layout_height="wrap_content">
 	</Button>

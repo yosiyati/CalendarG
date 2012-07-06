@@ -2,9 +2,11 @@ package jp.android.calendar;
 
 import java.util.Calendar;
 import java.util.GregorianCalendar;
+import java.util.List;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -29,11 +31,20 @@ public class CalendarActivity extends Activity implements OnClickListener {
 	private int day = calendar.get(Calendar.DAY_OF_MONTH);
 	private int dayOfWeek = calendar.get(Calendar.DAY_OF_WEEK);
 
+	private RegistDao registDao;
+	private SQLiteDatabase db;
+
 	/** Called when the activity is first created. */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
+
+		DatabaseHelper dbHelper = new DatabaseHelper(this);
+		db = dbHelper.getReadableDatabase();
+
+		// Helperクラスからdbを取得したものをDaoのコンストラクタに設定
+		registDao = new RegistDao(db);
 
 		// 前月ボタンのインスタンス生成+onClickListenerを設定
 		prevMonth = (Button) findViewById(R.id.prevMonth);
@@ -90,7 +101,7 @@ public class CalendarActivity extends Activity implements OnClickListener {
 		btn_table[41] = (Button) this.findViewById(R.id.btn_41);
 		btn_table[42] = (Button) this.findViewById(R.id.btn_42);
 
-		// 現在の年月を、表示するTextViewにセット
+		// 現在の年月を表示するTextViewにセット
 		dateText.setText(String.valueOf(String.valueOf(year + "年" + (month + 1)
 				+ "月")));
 
@@ -114,7 +125,6 @@ public class CalendarActivity extends Activity implements OnClickListener {
 			btn_table[i].setTextSize(15);
 			day = day + 1;
 		}
-
 	}
 
 	// ボタンがクリックされた時の処理
@@ -170,13 +180,29 @@ public class CalendarActivity extends Activity implements OnClickListener {
 			btn_table[i].setText("");
 		}
 
-		// 日付ボタンが押されたときに遷移する先に送るやつ
+		// 日付ボタンが押されたときの処理
 		for (int i = dayOfWeek; i <= dayOfWeek + lastDate - 1; i++) {
 			if (v == btn_table[i]) {
+				// monthとdayをString型に変換
+				String Month = String.valueOf(month + 1);
+				String Day = String.valueOf(day - lastDate);
+
+				// 月日を渡して該当する有名人を検索
+				List<RegistData> registList = registDao.findAll(Month, Day);
+
+				// 検索した有名人をセットする
+				RegistDataList registdatalist = new RegistDataList();
+				for (RegistData registdata : registList) {
+					registdatalist.setRegistDataList(registdata);
+				}
+
+				// 画面遷移するときに使う処理
 				Intent intent = new Intent();
-				intent.setClass(CalendarActivity.this, List.class);
+				intent.setClass(CalendarActivity.this, BirthList.class);
 				intent.putExtra("MONTH", String.valueOf(month + 1));
 				intent.putExtra("DAY", String.valueOf(day - lastDate));
+				intent.putExtra("RegistDataList", registdatalist);
+				intent.setAction(Intent.ACTION_VIEW);
 				startActivity(intent);
 			}
 			day = day + 1;

@@ -49,7 +49,7 @@ public class BirthList extends Activity {
 
 		List<RegistData> registdata = data.getRegistDataList();
 
-		//showListに値を渡し連結さてdatalistに挿入
+		//showListに値を渡し連結さてdataListに挿入
 		for (RegistData rd : registdata) {
 			dataList.add(showList(rd));
 		}
@@ -75,12 +75,13 @@ public class BirthList extends Activity {
 
 		//取得したデータを連結
 		sb.append(name);
-		sb.append("/");
+		sb.append(" / ");
 		sb.append(work);
-
+		
 		return sb.toString();
 	}
 
+	//　戻るボタンが押下された時の処理
 	class backButtonClickListener implements OnClickListener {
 		@Override
 		public void onClick(View v) {

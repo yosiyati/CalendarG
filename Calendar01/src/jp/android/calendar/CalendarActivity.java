@@ -14,6 +14,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class CalendarActivity extends Activity implements OnClickListener {
+
 	// 前月のボタン
 	private Button prevMonth;
 	// 次月のボタン

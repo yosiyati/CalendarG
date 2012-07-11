@@ -6,7 +6,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 
-	private static final String DATABASE_NAME = "birthday";
+	private static final String DATABASE_NAME = "birthday_UTF-8.db";
 	private static final int DATABASE_VERSION = 1;
 
 	public DatabaseHelper(Context context) {
@@ -23,6 +23,5 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 	@Override
 	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 		// TODO 自動生成されたメソッド・スタブ
-
 	}
 }

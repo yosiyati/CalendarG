@@ -24,15 +24,15 @@ public class RegistDao {
 	public List<RegistData> findAll(String month, String day) {
 		List<RegistData> addressList = new ArrayList<RegistData>();
 
-		// SQLの中身
+		// SQL
 		String sql = "select " + COLUMN_NAME + ", " + COLUMN_JOB + " from "
 				+ TABLE_NAME + " where birth.month = " + month
 				+ " and birth.day = " + day + ";";
 
-		// SQLを実行して必要なデータを抽出
+		// SQLを実行して該当データを抽出
 		Cursor cursor = db.rawQuery(sql, null);
 
-		// 取得できたレコードの数だけ繰り返す　教科書195表5-5
+		// 取得できたレコードの数だけ繰り返す
 		// moveToNext()は次のレコードが取得出来たらtrueを返す
 		while (cursor.moveToNext()) {
 			RegistData registdata = new RegistData();
